@@ -1,0 +1,129 @@
+{
+  "title": "$10,000 in Grants Awarded at Rochester Sports Banquet to Enhance Local Sports Facilities",
+  "slug": "grants-awarded-2026",
+  "shortTitle": "$10,000 in Grants Awarded to Enhance Local Sports Facilities",
+  "deck": "Local Associations Receive Over $10,000 in Grants to Improve Rochester Sports Facilities",
+  "summary": "The Rochester Sports Foundation awarded more than $10,000 in grants to support improvements at local softball facilities.",
+  "articleType": "grant",
+  "category": "Grants & Giving",
+  "publicationDate": "2026-04-14",
+  "author": "Rochester Sports Foundation",
+  "readTime": "3-minute read",
+  "status": "published",
+  "featured": true,
+  "featuredImage": "/assets/images/news/grants-awarded-2026/banquet-grant-recipients-ryfsa.jpg",
+  "featuredAlt": "Foundation President Chris Terry with Rochester Youth Fastpitch Softball Association grant recipients",
+  "featuredCaption": "Rochester Sports Foundation President Chris Terry with Rochester Youth Fastpitch Softball Association grant recipients Jen Stewart and Holly Schmitz.",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "lede",
+      "content": "The 20th Anniversary Rochester Sports Banquet, held Sunday, February 1, was a landmark occasion celebrating local sports excellence and community impact."
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "An annual tradition since 2005, the event brought together players, coaches, families, and community leaders to honor the top performances of the 2025 season. Beyond the individual accolades, the Foundation continued its core mission: supporting and advancing the infrastructure of local sports facilities."
+    },
+    {
+      "type": "quote",
+      "quote": "The banquet is our moment to pause and appreciate the immense talent and dedication within our local sports community.",
+      "attributionName": "Chris Terry",
+      "attributionTitle": "President, Rochester Sports Foundation"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "Terry added that the Foundation is proud the annual celebration also helps improve the facilities where Rochester athletes play."
+    },
+    {
+      "type": "stats",
+      "items": [
+        {
+          "number": "$10,000+",
+          "label": "invested in local sports facilities"
+        },
+        {
+          "number": "20 years",
+          "label": "of celebrating Rochester sports"
+        }
+      ],
+      "heading": "Community investment with lasting value",
+      "text": "Grant funding supports practical improvements that help local associations provide safer, stronger, and more welcoming places for athletes and spectators."
+    },
+    {
+      "type": "heading",
+      "text": "Supporting Rochester softball"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "Featured grant recipients included Brad and Clover Tiedeken of the Rochester Softball Association and Jen Stewart and Holly Schmitz of the Rochester Youth Fastpitch Softball Association, along with Foundation President Chris Terry."
+    },
+    {
+      "type": "photoStory",
+      "image": "/assets/images/news/grants-awarded-2026/banquet-grant-recipients.jpg",
+      "alt": "Brad and Clover Tiedeken with Rochester Sports Foundation President Chris Terry",
+      "caption": "Brad and Clover Tiedeken with Rochester Sports Foundation President Chris Terry.",
+      "eyebrow": "Grant recipient",
+      "heading": "Rochester Softball Association",
+      "text": "<p>Brad and Clover Tiedeken represented the Rochester Softball Association as it received support for a needed scoreboard replacement at the McQuillan Softball Complex.</p><p>The complex welcomes hundreds of teams and visitors, from youth through adult competition, during each calendar year.</p>"
+    },
+    {
+      "type": "heading",
+      "text": "Projects supported by the grants"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "The two projects address practical facility needs while helping local softball organizations continue serving athletes throughout the Rochester area."
+    },
+    {
+      "type": "gallery",
+      "heading": "",
+      "items": [
+        {
+          "image": "/assets/images/news/grants-awarded-2026/mcquillan-softball-complex.jpg",
+          "alt": "Aerial view of the McQuillan Softball Complex",
+          "caption": "Grant funding will assist with a needed scoreboard replacement at the McQuillan Softball Complex."
+        },
+        {
+          "image": "/assets/images/news/grants-awarded-2026/ryfsa-complex.jpg",
+          "alt": "Aerial view of the Rochester Youth Fastpitch Softball Association complex",
+          "caption": "Funding will assist the Rochester Youth Fastpitch Softball Association with batting-cage construction."
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "heading": "",
+      "text": "<p>The Rochester Sports Foundation works with community partners to advance sports and recreation facilities throughout the region.</p>",
+      "buttonLabel": "Learn about Foundation grants",
+      "buttonUrl": "/grants/"
+    }
+  ],
+  "related": [
+    {
+      "title": "Reinvesting Lodging Tax Funds",
+      "category": "Foundation News",
+      "date": "2026-06-12",
+      "url": "/news/"
+    },
+    {
+      "title": "Proposed Enhancements to the Regional Sports Center",
+      "category": "Projects",
+      "date": "2026-02-26",
+      "url": "/news/"
+    },
+    {
+      "title": "Foundation Awards $10K in Grants at the Sports Banquet",
+      "category": "Foundation News",
+      "date": "2025-02-04",
+      "url": "/news/"
+    }
+  ],
+  "seo": {
+    "title": "$10,000 in Grants Awarded to Enhance Local Sports Facilities",
+    "description": "The Rochester Sports Foundation awarded more than $10,000 in grants to support improvements at local sports facilities."
+  }
+}

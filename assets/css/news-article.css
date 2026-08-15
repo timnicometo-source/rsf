@@ -1,0 +1,617 @@
+/* =========================================================
+   1. ARTICLE BASE
+   ========================================================= */
+
+.article-page {
+  --article-accent: var(--orange);
+  --article-accent-soft: #fff4ec;
+  background: #ffffff;
+}
+
+.article-page--grant {
+  --article-accent: var(--orange);
+  --article-accent-soft: #fff4ec;
+}
+
+.article-page figure {
+  margin: 0;
+}
+
+.article-page figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   2. ARTICLE HEADER
+   ========================================================= */
+
+.article-header {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 15%, rgba(60, 165, 211, 0.2), transparent 28%),
+    linear-gradient(135deg, #071e32 0%, var(--navy) 68%, #154f7c 100%);
+  color: #ffffff;
+  padding: 34px 0 110px;
+}
+
+.article-header::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  bottom: -145px;
+  width: 340px;
+  height: 340px;
+  border: 70px solid rgba(255, 255, 255, 0.035);
+  border-radius: 50%;
+}
+
+.article-header__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.article-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 66px;
+  color: #c6d9e6;
+  font-size: 0.76rem;
+}
+
+.article-breadcrumb a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.article-kicker {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.article-category {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 5px 11px;
+  background: var(--article-accent);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.article-date {
+  color: #c6d9e6;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.article-header h1 {
+  max-width: 1000px;
+  margin: 0;
+  font-size: clamp(2.75rem, 5.2vw, 5.4rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.99;
+}
+
+.article-deck {
+  max-width: 780px;
+  margin: 29px 0 0;
+  color: #dbe8f0;
+  font-size: clamp(1.08rem, 2vw, 1.35rem);
+  line-height: 1.65;
+}
+
+.article-byline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+  color: #acc7d8;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   3. FEATURE IMAGE
+   ========================================================= */
+
+.article-feature {
+  position: relative;
+  z-index: 2;
+  margin-top: -64px;
+}
+
+.article-feature figure {
+  padding: 10px;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(7, 30, 50, 0.18);
+}
+
+.article-feature img {
+  width: 100%;
+  height: clamp(340px, 56vw, 650px);
+  object-fit: cover;
+  object-position: center;
+}
+
+.article-feature figcaption {
+  padding: 0 5px 3px;
+}
+
+/* =========================================================
+   4. ARTICLE LAYOUT AND SHARE LINKS
+   ========================================================= */
+
+.article-layout {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 780px) 1fr;
+  gap: 48px;
+  padding-top: 80px;
+  padding-bottom: 105px;
+}
+
+.article-share {
+  align-self: start;
+  position: sticky;
+  top: 28px;
+  padding-top: 6px;
+}
+
+.article-share p {
+  margin: 0 0 13px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.article-share a {
+  display: block;
+  width: max-content;
+  margin: 9px 0;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.article-share a:hover {
+  color: var(--orange);
+}
+
+/* =========================================================
+   5. ARTICLE TYPOGRAPHY
+   ========================================================= */
+
+.article-body {
+  grid-column: 2;
+  min-width: 0;
+  color: #283b4c;
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.article-body p {
+  margin: 0 0 26px;
+}
+
+.article-lede {
+  color: var(--ink);
+  font-size: clamp(1.3rem, 2.2vw, 1.62rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.55;
+}
+
+.article-body h2 {
+  margin: 60px 0 20px;
+  color: var(--ink);
+  font-size: clamp(1.8rem, 3vw, 2.45rem);
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+/* =========================================================
+   6. PULL QUOTE
+   ========================================================= */
+
+.article-quote {
+  position: relative;
+  margin: 54px 0;
+  padding: 9px 0 9px 34px;
+  border-left: 5px solid var(--article-accent);
+}
+
+.article-quote::before {
+  content: "\201C";
+  position: absolute;
+  top: -38px;
+  right: 10px;
+  color: var(--article-accent-soft);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 9rem;
+  line-height: 1;
+  z-index: -1;
+}
+
+.article-quote p {
+  margin: 0 0 20px;
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
+}
+
+.article-quote footer {
+  display: flex;
+  flex-direction: column;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.article-quote strong {
+  color: var(--ink);
+}
+
+/* =========================================================
+   7. IMPACT CALLOUT
+   ========================================================= */
+
+.article-callout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 58px 0;
+  padding: 38px;
+  background: var(--article-accent-soft);
+  border-top: 5px solid var(--article-accent);
+}
+
+.article-callout > div {
+  padding-right: 20px;
+  border-right: 1px solid rgba(237, 122, 42, 0.25);
+}
+
+.article-callout > div:nth-child(2) {
+  border-right: 0;
+}
+
+.article-callout__number,
+.article-callout__label {
+  display: block;
+}
+
+.article-callout__number {
+  color: var(--navy);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+}
+
+.article-callout__label {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.article-callout h2,
+.article-callout p {
+  grid-column: 1 / -1;
+}
+
+.article-callout h2 {
+  margin: 18px 0 0;
+  font-size: 1.65rem;
+}
+
+.article-callout p {
+  margin: -10px 0 0;
+  font-size: 0.98rem;
+}
+
+/* =========================================================
+   8. INLINE PHOTO STORY
+   ========================================================= */
+
+.article-photo-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(250px, 0.75fr);
+  gap: 34px;
+  align-items: center;
+  width: min(1080px, calc(100vw - 40px));
+  margin: 52px 0 66px;
+  padding: 10px 34px 10px 10px;
+  background: var(--soft);
+  border-right: 5px solid var(--article-accent);
+}
+
+.article-photo-story img {
+  width: 100%;
+  min-height: 390px;
+  object-fit: cover;
+}
+
+.article-photo-story figcaption {
+  padding: 0 5px 5px;
+}
+
+.article-photo-story h3 {
+  margin: 0 0 15px;
+  color: var(--navy);
+  font-size: clamp(1.55rem, 2.7vw, 2.15rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.article-photo-story > div > p:not(.eyebrow) {
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   9. ARTICLE GALLERY
+   ========================================================= */
+
+.article-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: min(1080px, calc(100vw - 40px));
+  margin: 48px 0 58px;
+}
+
+.article-gallery figure {
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+}
+
+.article-gallery img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.article-gallery figcaption {
+  padding: 0 5px 5px;
+}
+
+/* =========================================================
+   10. ARTICLE ENDNOTE
+   ========================================================= */
+
+.article-endnote {
+  margin-top: 62px;
+  padding: 33px 35px;
+  background: var(--soft);
+  border-left: 4px solid var(--sky);
+}
+
+.article-endnote p {
+  margin-bottom: 16px;
+  font-size: 0.96rem;
+}
+
+/* =========================================================
+   11. RELATED NEWS
+   ========================================================= */
+
+.related-news {
+  padding: 85px 0 100px;
+  background: var(--soft);
+}
+
+.related-news__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.related-news__heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.related-news__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.related-card {
+  display: block;
+  padding: 28px;
+  background: #ffffff;
+  border-top: 4px solid var(--sky);
+  box-shadow: 0 12px 35px rgba(11, 45, 76, 0.07);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(11, 45, 76, 0.12);
+}
+
+.related-card span {
+  color: var(--blue);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.related-card h3 {
+  margin: 13px 0 24px;
+  font-size: 1.25rem;
+  line-height: 1.32;
+}
+
+.related-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+/* =========================================================
+   12. TABLET LAYOUT
+   ========================================================= */
+
+@media (max-width: 980px) {
+  .article-layout {
+    grid-template-columns: minmax(0, 780px);
+    justify-content: center;
+  }
+
+  .article-share {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    grid-column: 1;
+  }
+
+  .article-share p,
+  .article-share a {
+    margin: 0;
+  }
+
+  .article-body {
+    grid-column: 1;
+  }
+
+  .article-gallery {
+    width: 100%;
+  }
+
+  .article-photo-story {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   13. MOBILE LAYOUT
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .article-header {
+    padding: 25px 0 82px;
+  }
+
+  .article-breadcrumb {
+    margin-bottom: 42px;
+  }
+
+  .article-header h1 {
+    font-size: clamp(2.35rem, 12vw, 3.65rem);
+  }
+
+  .article-feature {
+    margin-top: -42px;
+  }
+
+  .article-feature img {
+    height: 330px;
+  }
+
+  .article-layout {
+    gap: 35px;
+    padding-top: 55px;
+    padding-bottom: 75px;
+  }
+
+  .article-body {
+    font-size: 1rem;
+  }
+
+  .article-callout,
+  .article-photo-story,
+  .article-gallery,
+  .related-news__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-photo-story {
+    gap: 20px;
+    padding: 8px 8px 27px;
+    border-right: 0;
+    border-bottom: 5px solid var(--article-accent);
+  }
+
+  .article-photo-story img {
+    min-height: 300px;
+  }
+
+  .article-photo-story > div {
+    padding: 0 17px;
+  }
+
+  .article-callout {
+    padding: 28px 24px;
+  }
+
+  .article-callout > div {
+    padding: 0 0 22px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(237, 122, 42, 0.25);
+  }
+
+  .article-callout > div:nth-child(2) {
+    border-bottom: 0;
+  }
+
+  .article-quote {
+    padding-left: 23px;
+  }
+
+  .article-endnote {
+    padding: 27px 24px;
+  }
+
+  .related-news {
+    padding: 65px 0 75px;
+  }
+
+  .related-news__heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* =========================================================
+   14. REDUCED-MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .related-card {
+    transition: none;
+  }
+}

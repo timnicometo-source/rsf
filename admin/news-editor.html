@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSF News Editor</title>
+    <link rel="stylesheet" href="/assets/css/news-editor.css" />
+    <script src="/assets/js/news-editor.js" defer></script>
+  </head>
+  <body>
+    <header class="editor-header">
+      <div>
+        <p class="editor-eyebrow">Rochester Sports Foundation</p>
+        <h1>News Editor</h1>
+      </div>
+      <div class="header-actions">
+        <span id="connection-status" class="status">No site folder connected</span>
+        <button id="connect-folder" class="button button-primary" type="button">Connect site folder</button>
+      </div>
+    </header>
+
+    <div id="browser-warning" class="browser-warning" hidden>
+      This editor requires Chrome or Edge because it saves directly to your local project folder.
+    </div>
+
+    <main class="editor-shell">
+      <aside class="article-sidebar">
+        <div class="sidebar-heading">
+          <div>
+            <p class="editor-eyebrow">Content</p>
+            <h2>Articles</h2>
+          </div>
+          <button id="new-article" class="icon-button" type="button" title="Create new article" disabled>+</button>
+        </div>
+        <label class="search-field">
+          <span>Search articles</span>
+          <input id="article-search" type="search" placeholder="Search by title…" disabled />
+        </label>
+        <div id="article-list" class="article-list">
+          <p class="empty-message">Connect your site folder to begin.</p>
+        </div>
+      </aside>
+
+      <section class="editor-workspace">
+        <div id="welcome-panel" class="welcome-panel">
+          <span class="welcome-number">01</span>
+          <h2>Connect the Rochester Sports Foundation project folder.</h2>
+          <p>The editor will read and save article records locally. Nothing is uploaded or published from this page.</p>
+          <button class="button button-primary connect-copy" type="button">Choose project folder</button>
+        </div>
+
+        <form id="article-form" hidden>
+          <div class="form-toolbar">
+            <div>
+              <p id="editing-label" class="editor-eyebrow">Editing article</p>
+              <h2 id="editing-title">Untitled article</h2>
+            </div>
+            <div class="toolbar-actions">
+              <button id="delete-article" class="button button-danger" type="button">Delete</button>
+              <button id="open-preview" class="button button-secondary" type="button">Open preview</button>
+              <button id="save-article" class="button button-primary" type="submit">Save article</button>
+            </div>
+          </div>
+
+          <div id="notice" class="notice" hidden></div>
+
+          <nav class="editor-tabs" aria-label="Article editor sections">
+            <button class="tab active" type="button" data-tab="details">Article details</button>
+            <button class="tab" type="button" data-tab="content">Article content</button>
+            <button class="tab" type="button" data-tab="related">Related &amp; SEO</button>
+          </nav>
+
+          <section class="tab-panel active" data-panel="details">
+            <div class="panel-heading">
+              <p class="editor-eyebrow">Essentials</p>
+              <h3>Article details</h3>
+              <p>These fields control the article header, News archive card, and publication settings.</p>
+            </div>
+
+            <div class="field-grid">
+              <label class="field field-wide">
+                <span>Article title <b>*</b></span>
+                <textarea name="title" rows="2" required></textarea>
+              </label>
+              <label class="field">
+                <span>URL slug <b>*</b></span>
+                <input name="slug" type="text" pattern="[a-z0-9]+(?:-[a-z0-9]+)*" required />
+                <small>Lowercase words separated by hyphens.</small>
+              </label>
+              <label class="field">
+                <span>Short title <b>*</b></span>
+                <input name="shortTitle" type="text" required />
+                <small>Used on News cards and related articles.</small>
+              </label>
+              <label class="field field-wide">
+                <span>Subtitle <b>*</b></span>
+                <textarea name="deck" rows="3" required></textarea>
+              </label>
+              <label class="field field-wide">
+                <span>Archive summary <b>*</b></span>
+                <textarea name="summary" rows="3" required></textarea>
+              </label>
+              <label class="field">
+                <span>Article type</span>
+                <select name="articleType">
+                  <option value="standard">Standard news</option>
+                  <option value="project">Project update</option>
+                  <option value="grant">Grant announcement</option>
+                  <option value="feature">Feature story</option>
+                  <option value="event">Event recap</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Category</span>
+                <select name="category">
+                  <option>Foundation News</option>
+                  <option>Projects</option>
+                  <option>Grants &amp; Giving</option>
+                  <option>Events</option>
+                  <option>People</option>
+                  <option>Sports Tourism</option>
+                  <option>Community</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Publication date <b>*</b></span>
+                <input name="publicationDate" type="date" required />
+              </label>
+              <label class="field">
+                <span>Author</span>
+                <input name="author" type="text" />
+              </label>
+              <label class="field">
+                <span>Reading time</span>
+                <input name="readTime" type="text" placeholder="3-minute read" />
+              </label>
+              <label class="field">
+                <span>Publication status</span>
+                <select name="status">
+                  <option value="draft">Draft</option>
+                  <option value="published">Published</option>
+                </select>
+              </label>
+              <label class="check-field">
+                <input name="featured" type="checkbox" />
+                <span><strong>Featured article</strong><small>Eligible for prominent placement on the News page.</small></span>
+              </label>
+            </div>
+
+            <div class="subpanel">
+              <div class="subpanel-heading">
+                <div><p class="editor-eyebrow">Lead visual</p><h3>Featured photograph</h3></div>
+                <button class="button button-small upload-image" type="button" data-target="featuredImage">Choose and copy image</button>
+              </div>
+              <div class="field-grid">
+                <label class="field field-wide"><span>Image path <b>*</b></span><input name="featuredImage" class="media-path" type="text" required /></label>
+                <label class="field field-wide"><span>Alternative text <b>*</b></span><input name="featuredAlt" type="text" required /></label>
+                <label class="field field-wide"><span>Photo caption</span><textarea name="featuredCaption" rows="2"></textarea></label>
+              </div>
+              <div id="featured-preview" class="image-preview empty"><span>Featured image preview</span></div>
+            </div>
+          </section>
+
+          <section class="tab-panel" data-panel="content">
+            <div class="panel-heading content-heading">
+              <div><p class="editor-eyebrow">Flexible layout</p><h3>Article sections</h3><p>Add sections, enter their content, and use the arrows to change their order.</p></div>
+              <div class="add-block-control">
+                <select id="block-type" aria-label="Section type">
+                  <option value="paragraph">Text</option>
+                  <option value="heading">Section heading</option>
+                  <option value="image">Image</option>
+                  <option value="quote">Pull quote</option>
+                  <option value="stats">Statistics</option>
+                  <option value="photoStory">Photo with text</option>
+                  <option value="gallery">Photo gallery</option>
+                  <option value="callout">Highlighted message</option>
+                  <option value="document">PDF document</option>
+                </select>
+                <button id="add-block" class="button button-primary" type="button">Add section</button>
+              </div>
+            </div>
+            <div id="blocks-list" class="blocks-list"></div>
+          </section>
+
+          <section class="tab-panel" data-panel="related">
+            <div class="panel-heading content-heading">
+              <div><p class="editor-eyebrow">Continue reading</p><h3>Related articles</h3><p>Optional links displayed beneath the story.</p></div>
+              <button id="add-related" class="button button-secondary" type="button">Add related article</button>
+            </div>
+            <div id="related-list" class="related-list"></div>
+
+            <div class="subpanel seo-panel">
+              <div class="subpanel-heading"><div><p class="editor-eyebrow">Search engines</p><h3>SEO information</h3></div></div>
+              <div class="field-grid">
+                <label class="field field-wide"><span>Search result title</span><input name="seoTitle" type="text" /></label>
+                <label class="field field-wide"><span>Search result description</span><textarea name="seoDescription" rows="3"></textarea></label>
+              </div>
+            </div>
+          </section>
+        </form>
+      </section>
+    </main>
+
+    <dialog id="confirm-dialog">
+      <form method="dialog">
+        <h2>Discard unsaved changes?</h2>
+        <p>Your most recent changes have not been saved.</p>
+        <div class="dialog-actions">
+          <button value="cancel" class="button button-secondary">Keep editing</button>
+          <button value="confirm" class="button button-danger">Discard changes</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

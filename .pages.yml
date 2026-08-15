@@ -1,0 +1,408 @@
+media:
+  - name: news_images
+    label: News Images
+    input: assets/images/news
+    output: /assets/images/news
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
+
+  - name: news_documents
+    label: News Documents
+    input: assets/docs/news
+    output: /assets/docs/news
+    extensions: [pdf]
+    rename: safe
+
+content:
+  - name: news
+    label: News Articles
+    type: collection
+    path: content/news
+    format: json
+    filename:
+      template: "{slug}.json"
+      field: create
+    operations:
+      create: true
+      rename: true
+      delete: true
+    view:
+      primary: title
+      fields: [title, status, category, publicationDate, featured]
+      sort: [publicationDate, title, status]
+      search: [title, shortTitle, category, author, summary]
+      default:
+        sort: publicationDate
+        order: desc
+    fields:
+      - name: title
+        label: Article title
+        type: string
+        required: true
+
+      - name: slug
+        label: Page address
+        description: Use lowercase letters, numbers, and hyphens only.
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: Use lowercase letters, numbers, and single hyphens only.
+
+      - name: shortTitle
+        label: Short card title
+        description: A shorter version for homepage and News cards.
+        type: string
+        required: true
+
+      - name: deck
+        label: Subtitle or introduction
+        type: text
+        required: true
+
+      - name: summary
+        label: Card summary
+        description: One or two sentences used in News listings.
+        type: text
+        required: true
+
+      - name: articleType
+        label: Article type
+        type: select
+        required: true
+        default: standard
+        options:
+          values:
+            - name: standard
+              label: Standard News
+            - name: project
+              label: Project Update
+            - name: grant
+              label: Grant or Award
+            - name: feature
+              label: Feature Story
+            - name: event
+              label: Event Recap
+
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - Foundation News
+            - Projects
+            - Grants & Giving
+            - Events
+            - People
+            - Sports Tourism
+            - Community News
+
+      - name: publicationDate
+        label: Publication date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+
+      - name: author
+        label: Author
+        type: string
+        default: Rochester Sports Foundation
+        required: true
+
+      - name: readTime
+        label: Estimated reading time
+        description: "Example: 3-minute read"
+        type: string
+        default: 3-minute read
+
+      - name: status
+        label: Publication status
+        type: select
+        required: true
+        default: draft
+        options:
+          values:
+            - name: draft
+              label: Draft
+            - name: published
+              label: Published
+
+      - name: featured
+        label: Feature this article
+        description: Makes the article eligible for prominent placement.
+        type: boolean
+        default: false
+
+      - name: featuredImage
+        label: Featured image
+        type: image
+        required: true
+        options:
+          media: news_images
+          path: assets/images/news
+          rename: safe
+
+      - name: featuredAlt
+        label: Featured image description
+        description: Describe the photograph for visitors using screen readers.
+        type: text
+        required: true
+
+      - name: featuredCaption
+        label: Featured image caption
+        type: text
+
+      - name: blocks
+        label: Article sections
+        type: block
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{type}: {heading}{title}"
+        blockKey: type
+        blocks:
+          - name: paragraph
+            label: Text
+            fields:
+              - name: style
+                label: Text style
+                type: select
+                default: standard
+                options:
+                  values:
+                    - name: standard
+                      label: Standard paragraph
+                    - name: lede
+                      label: Large introductory paragraph
+              - name: content
+                label: Text
+                type: rich-text
+                required: true
+                options:
+                  format: html
+                  media: news_images
+                  switcher: false
+
+          - name: heading
+            label: Section heading
+            fields:
+              - name: text
+                label: Heading
+                type: string
+                required: true
+
+          - name: image
+            label: Image with caption
+            fields:
+              - name: image
+                label: Image
+                type: image
+                required: true
+                options:
+                  media: news_images
+                  rename: safe
+              - name: alt
+                label: Image description
+                type: text
+                required: true
+              - name: caption
+                label: Caption
+                type: text
+              - name: size
+                label: Image size
+                type: select
+                default: standard
+                options:
+                  values: [standard, wide]
+
+          - name: quote
+            label: Pull quote
+            fields:
+              - name: quote
+                label: Quotation
+                type: text
+                required: true
+              - name: attributionName
+                label: Person's name
+                type: string
+              - name: attributionTitle
+                label: Person's title
+                type: string
+
+          - name: stats
+            label: Statistics or impact callout
+            fields:
+              - name: items
+                label: Statistics
+                type: object
+                list:
+                  min: 1
+                  max: 4
+                  collapsible:
+                    collapsed: true
+                    summary: "{number} - {label}"
+                fields:
+                  - name: number
+                    label: Number
+                    type: string
+                    required: true
+                  - name: label
+                    label: Description
+                    type: string
+                    required: true
+              - name: heading
+                label: Heading
+                type: string
+              - name: text
+                label: Supporting text
+                type: text
+
+          - name: photoStory
+            label: Photo with separate text
+            fields:
+              - name: image
+                label: Image
+                type: image
+                required: true
+                options:
+                  media: news_images
+                  rename: safe
+              - name: alt
+                label: Image description
+                type: text
+                required: true
+              - name: caption
+                label: Photo caption
+                type: text
+              - name: eyebrow
+                label: Small section label
+                type: string
+              - name: heading
+                label: Heading
+                type: string
+                required: true
+              - name: text
+                label: Text beside the photo
+                type: rich-text
+                required: true
+                options:
+                  format: html
+                  switcher: false
+
+          - name: gallery
+            label: Photo gallery
+            fields:
+              - name: heading
+                label: Optional gallery heading
+                type: string
+              - name: items
+                label: Gallery images
+                type: object
+                list:
+                  min: 1
+                  collapsible:
+                    collapsed: true
+                    summary: "{caption}"
+                fields:
+                  - name: image
+                    label: Image
+                    type: image
+                    required: true
+                    options:
+                      media: news_images
+                      rename: safe
+                  - name: alt
+                    label: Image description
+                    type: text
+                    required: true
+                  - name: caption
+                    label: Caption
+                    type: text
+
+          - name: callout
+            label: Highlighted message
+            fields:
+              - name: heading
+                label: Heading
+                type: string
+              - name: text
+                label: Message
+                type: rich-text
+                required: true
+                options:
+                  format: html
+                  switcher: false
+              - name: buttonLabel
+                label: Optional button label
+                type: string
+              - name: buttonUrl
+                label: Optional button link
+                type: string
+
+          - name: document
+            label: Document download
+            fields:
+              - name: title
+                label: Document title
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+              - name: file
+                label: PDF file
+                type: file
+                required: true
+                options:
+                  media: news_documents
+                  extensions: [pdf]
+
+      - name: related
+        label: Related articles
+        type: object
+        list:
+          max: 3
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Article title
+            type: string
+            required: true
+          - name: category
+            label: Category
+            type: string
+            required: true
+          - name: date
+            label: Date
+            type: date
+            required: true
+            options:
+              format: yyyy-MM-dd
+          - name: url
+            label: Article link
+            type: string
+            required: true
+
+      - name: seo
+        label: Search and sharing
+        type: object
+        fields:
+          - name: title
+            label: Search title
+            type: string
+          - name: description
+            label: Search description
+            type: text
+
+settings:
+  commit:
+    identity: user
+    templates:
+      create: "Create news article: {name}"
+      update: "Update news article: {name}"
+      delete: "Delete news article: {name}"
+      rename: "Rename news article: {oldPath} -> {path}"
