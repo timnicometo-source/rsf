@@ -1,0 +1,83 @@
+{
+  "title": "New Dedicated Curling Facility Possible for Rochester",
+  "slug": "new-dedicated-curling-facility-rochester",
+  "shortTitle": "Curling Club Proposes Dedicated Rochester Facility",
+  "deck": "The Curling Club of Rochester outlined plans for a six-sheet facility designed to expand adult and youth participation while attracting tournaments.",
+  "summary": "A dedicated six-sheet curling facility could support local programs, inclusive recreation, sports tourism, and community gathering opportunities.",
+  "articleType": "project",
+  "category": "Projects",
+  "publicationDate": "2025-07-15",
+  "author": "Ed Hruska",
+  "readTime": "4-minute read",
+  "status": "published",
+  "featured": false,
+  "featuredImage": "/assets/images/news/new-dedicated-curling-facility-rochester/curling-action.jpg",
+  "featuredAlt": "Curler sweeping a red-handled curling stone toward the button with several stones in the house",
+  "featuredCaption": "The Curling Club of Rochester proposed a six-sheet dedicated facility to grow local adult and youth programs.",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "lede",
+      "content": "The Curling Club of Rochester presented the Rochester Sports Foundation with a plan for a dedicated six-sheet curling facility that would be built and maintained by the club."
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "The volunteer-managed 501(c)(3) organization said a permanent home would allow it to develop and grow adult and youth curling programs while creating a welcoming gathering place for participants of different ages and skill levels."
+    },
+    {
+      "type": "quote",
+      "quote": "We are committed to creating a vibrant and welcoming community where members can gather, learn, and compete in the spirit of sportsmanship and camaraderie.",
+      "attributionName": "Curling Club of Rochester",
+      "attributionTitle": "Mission statement"
+    },
+    {
+      "type": "heading",
+      "text": "Growing participation and limited ice"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "USA Curling experienced steady growth following curling's 1998 Olympic debut. From 2011 through the publication of the proposal, 17 dedicated facilities containing 70 sheets opened across the country. USA Curling reported more than 23,500 members across over 200 clubs in 2023."
+    },
+    {
+      "type": "stats",
+      "items": [
+        { "number": "6 sheets", "label": "recommended Rochester facility" },
+        { "number": "23,500+", "label": "USA Curling members reported in 2023" },
+        { "number": "25-100", "label": "potential tournament hotel rooms per night" }
+      ],
+      "heading": "A facility sized for community and competition",
+      "text": "The proposal cited communities of Rochester's size as capable of supporting dedicated curling facilities and tournament activity."
+    },
+    {
+      "type": "heading",
+      "text": "Community and economic benefits"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "The club identified social interaction, fitness, inclusion, youth development, and economic activity as primary benefits. Tournament visits could support lodging, restaurants, retail, transportation, and other local businesses while providing additional exposure for Rochester."
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "A curling-specific facility could strengthen community connections, provide physical and mental health benefits, stimulate tourism, introduce young people to a lifelong winter sport, and offer space for popular team-building events."
+    },
+    {
+      "type": "callout",
+      "heading": "A plan for expanded access",
+      "text": "<p>The proposal was developed to expand opportunities for Rochester-area residents to participate in curling while positioning the community to host larger events.</p>",
+      "buttonLabel": "Explore current projects",
+      "buttonUrl": "/projects/"
+    }
+  ],
+  "related": [
+    { "title": "Winona Getting New Sports Complex", "category": "Community News", "date": "2025-05-29", "url": "/news/winona-getting-new-sports-complex/" },
+    { "title": "Proposed Enhancements to the Rochester Regional Sports Center", "category": "Projects", "date": "2026-02-26", "url": "/news/rochester-regional-sports-center-enhancements/" }
+  ],
+  "seo": {
+    "title": "Dedicated Curling Facility Proposed for Rochester",
+    "description": "The Curling Club of Rochester proposed a six-sheet dedicated facility to grow local programs and attract tournament activity."
+  }
+}

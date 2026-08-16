@@ -1,0 +1,85 @@
+{
+  "title": "Proposed Enhancements to the Rochester Regional Sports Center",
+  "slug": "rochester-regional-sports-center-enhancements",
+  "shortTitle": "Regional Sports Center Enhancement Study",
+  "deck": "The City of Rochester and RCTC began exploring maintenance, modernization, and expansion opportunities for their shared athletic campus.",
+  "summary": "Community input was invited to help shape potential infrastructure updates and long-term enhancements at the Rochester Regional Sports Center.",
+  "articleType": "project",
+  "category": "Projects",
+  "publicationDate": "2026-02-26",
+  "author": "Rochester Sports Foundation",
+  "readTime": "4-minute read",
+  "status": "published",
+  "featured": false,
+  "featuredImage": "/assets/images/news/rochester-regional-sports-center-enhancements/rsrc-rendering.jpg",
+  "featuredAlt": "Conceptual rendering associated with Rochester sports facility planning",
+  "featuredCaption": "The City of Rochester and Rochester Community and Technical College explored the future of their shared sports and recreation campus.",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "lede",
+      "content": "The Rochester Regional Sports Center, developed by the City of Rochester and Rochester Community and Technical College in 2002, has become an important destination for athletics and recreation in southeastern Minnesota."
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "Originally funded through Local Sales Tax, the campus includes an indoor field house with a 200-meter track, multipurpose courts, meeting spaces, and Rochester Regional Stadium with a climate-controlled winter dome."
+    },
+    {
+      "type": "heading",
+      "text": "A vision for the facility's next chapter"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "As the facility entered its third decade, the City and RCTC explored maintenance needs and possible enhancements. Discussions included replacement of the stadium dome fabric, modernization of interior spaces, additional indoor court space, and expanded outdoor amenities to meet increasing demand for year-round recreation."
+    },
+    {
+      "type": "heading",
+      "text": "Community-driven planning"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "No final decisions about design, amenities, or construction timelines had been made. The planning process sought perspectives from RCTC students and staff, youth sports organizations and families, older adults and fitness enthusiasts, and residents who did not regularly use the facility."
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "The engagement was intended to validate successful programs while identifying unmet needs and emerging ideas that could shape the campus as both an educational and community resource."
+    },
+    {
+      "type": "heading",
+      "text": "Funding and transparency"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "The City and RCTC were evaluating potential funding options for future public consideration. The original planning announcement stated that proposed improvements or enhancements would not be paid for through local property taxes."
+    },
+    {
+      "type": "heading",
+      "text": "Next steps"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "Feedback gathered through surveys and open houses was expected to be summarized for the Rochester City Council. Results would help inform design concepts, programming priorities, and potential funding strategies, with additional updates shared through official City and RCTC communication channels."
+    },
+    {
+      "type": "callout",
+      "heading": "Planning information",
+      "text": "<p>This article reflects the public engagement period announced in February 2026. The original online survey closed March 23, 2026.</p>",
+      "buttonLabel": "View Foundation projects",
+      "buttonUrl": "/projects/"
+    }
+  ],
+  "related": [
+    { "title": "New Dedicated Curling Facility Possible for Rochester", "category": "Projects", "date": "2025-07-15", "url": "/news/new-dedicated-curling-facility-rochester/" },
+    { "title": "$10,000 in Grants Awarded to Enhance Local Sports Facilities", "category": "Grants & Giving", "date": "2026-04-14", "url": "/news/grants-awarded-2026/" }
+  ],
+  "seo": {
+    "title": "Proposed Rochester Regional Sports Center Enhancements",
+    "description": "The City of Rochester and RCTC explored potential maintenance, modernization, and expansion opportunities for the Regional Sports Center."
+  }
+}

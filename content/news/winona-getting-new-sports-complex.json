@@ -1,0 +1,71 @@
+{
+  "title": "Winona Getting New Sports Complex",
+  "slug": "winona-getting-new-sports-complex",
+  "shortTitle": "Cotter Plans New Indoor Athletic Complex in Winona",
+  "deck": "Cotter Schools plans to transform the former Lourdes Hall site into a year-round indoor athletic and recreation facility.",
+  "summary": "A donated property will create space for athletics, physical education, youth programs, and community recreation in Winona.",
+  "articleType": "project",
+  "category": "Community News",
+  "publicationDate": "2025-05-29",
+  "author": "Cotter Communications Office",
+  "readTime": "4-minute read",
+  "status": "published",
+  "featured": false,
+  "featuredImage": "/assets/images/news/winona-getting-new-sports-complex/cotter-campus-aerial.jpg",
+  "featuredAlt": "Aerial view of the Cotter Schools campus and surrounding Winona neighborhood",
+  "featuredCaption": "Cotter Schools plans to redevelop the former Lourdes Hall site as a new indoor athletic complex.",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "lede",
+      "content": "Cotter Schools announced the purchase of Lourdes Hall, a former Winona State University dormitory, with plans to redevelop the long-vacant property into an indoor athletic complex."
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "Following discussions with the City of Winona, Winona State University, and the College of Saint Teresa Alumnae Association, Cotter planned to remove the existing structure and transform the site into a facility serving both the school and the broader community."
+    },
+    {
+      "type": "heading",
+      "text": "A flexible, year-round facility"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "Although final details remained under development, initial plans called for a combination of turf and hard-surface areas along with a walking track. The flexible spaces would support athletics, physical education, and community recreation throughout the year while responding to growing enrollment and demand for accessible indoor facilities."
+    },
+    {
+      "type": "quote",
+      "quote": "This space will enhance student learning by supporting physical education, co-curricular programs, and intramural programs that support positive social and physical development.",
+      "attributionName": "Mary Eileen Fitch",
+      "attributionTitle": "President, Cotter Schools"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "Fitch said the project represented a meaningful investment in Cotter's mission and would create opportunities for young people to grow, lead, and thrive both inside and outside the classroom. The facility was also envisioned as shared space for youth programs, local teams, and residents seeking opportunities to stay active in every season."
+    },
+    {
+      "type": "heading",
+      "text": "A community-supported next chapter"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "The purchase of Lourdes Hall was made possible through a donation to Cotter Schools. The project continues the school's work to adapt its campus for contemporary needs while serving as a community partner."
+    },
+    {
+      "type": "callout",
+      "heading": "More information",
+      "text": "<p>Questions about the project may be directed to Cotter Schools at communications@cotterschools.org.</p>"
+    }
+  ],
+  "related": [
+    { "title": "New Dedicated Curling Facility Possible for Rochester", "category": "Projects", "date": "2025-07-15", "url": "/news/new-dedicated-curling-facility-rochester/" },
+    { "title": "Proposed Enhancements to the Rochester Regional Sports Center", "category": "Projects", "date": "2026-02-26", "url": "/news/rochester-regional-sports-center-enhancements/" }
+  ],
+  "seo": {
+    "title": "Cotter Plans New Indoor Athletic Complex in Winona",
+    "description": "Cotter Schools plans to redevelop the former Lourdes Hall property into a year-round indoor athletic and community recreation complex."
+  }
+}

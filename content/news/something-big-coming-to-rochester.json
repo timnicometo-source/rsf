@@ -1,0 +1,74 @@
+{
+  "title": "Something BIG Is Coming to Rochester",
+  "slug": "something-big-coming-to-rochester",
+  "shortTitle": "World Juniors Pre-Tournament Series Coming to Rochester",
+  "deck": "Rochester was selected as a host community for World Juniors pre-tournament hockey events in December 2025.",
+  "summary": "International hockey returned to the spotlight as Rochester prepared to welcome World Juniors teams and exhibition games ahead of the 2026 championship.",
+  "articleType": "event",
+  "category": "Sports Tourism",
+  "publicationDate": "2025-04-23",
+  "author": "Rochester Sports Foundation",
+  "readTime": "3-minute read",
+  "status": "published",
+  "featured": false,
+  "featuredImage": "/assets/images/news/something-big-coming-to-rochester/world-juniors-announcement.jpg",
+  "featuredAlt": "World Juniors championship announcement display welcoming the international hockey event to Rochester",
+  "featuredCaption": "Rochester was announced as a host community for World Juniors pre-tournament events scheduled for December 2025.",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "lede",
+      "content": "On April 21, 2025, a press conference at Mayo Civic Center announced that the World Juniors Pre-Tournament Series Hockey Tournament was coming to Rochester in December."
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "Rochester was expected to host eight to 10 teams that would later compete in the World Juniors tournament in the Twin Cities. The city joined Bemidji and Mankato as Minnesota host communities for exhibition games leading up to the 2026 International Ice Hockey Federation World Junior Championship, held December 26, 2025 through January 5, 2026."
+    },
+    {
+      "type": "stats",
+      "items": [
+        { "number": "8-10", "label": "teams expected in Rochester" },
+        { "number": "10", "label": "nations competing for gold" },
+        { "number": "800+", "label": "local youth hockey participants" }
+      ],
+      "heading": "A world-class hockey opportunity",
+      "text": "The championship showcases the world's leading men's hockey players under age 20."
+    },
+    {
+      "type": "quote",
+      "quote": "This exciting opportunity brings future NHL stars to our own backyard, giving our community a front-row seat to world-class competition.",
+      "attributionName": "Matt Esau",
+      "attributionTitle": "Executive Director, Rochester Sports"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "Esau said the event would also allow Rochester to showcase itself to USA Hockey as a premier host city for future events, while recognizing the community members whose support helped make the opportunity possible."
+    },
+    {
+      "type": "heading",
+      "text": "A proud Rochester hockey tradition"
+    },
+    {
+      "type": "paragraph",
+      "style": "standard",
+      "content": "Rochester's hockey tradition spans youth programs, national championship Junior teams, and athletes who have competed in college, the Olympics, and the professional ranks. Selection as a World Juniors host community represented another important chapter in that history."
+    },
+    {
+      "type": "callout",
+      "heading": "Event information",
+      "text": "<p>This story was originally published as Rochester prepared for the December 2025 pre-tournament events and the 2026 IIHF World Junior Championship.</p>",
+      "buttonLabel": "Explore Rochester sports tourism",
+      "buttonUrl": "/events/"
+    }
+  ],
+  "related": [
+    { "title": "Baseball Continues Its Home Run Tradition", "category": "Sports Tourism", "date": "2025-05-01", "url": "/news/baseball-continues-its-home-run-tradition/" },
+    { "title": "Winona Getting New Sports Complex", "category": "Community News", "date": "2025-05-29", "url": "/news/winona-getting-new-sports-complex/" }
+  ],
+  "seo": {
+    "title": "World Juniors Pre-Tournament Hockey Coming to Rochester",
+    "description": "Rochester was selected to host World Juniors pre-tournament hockey events ahead of the 2026 IIHF World Junior Championship."
+  }
+}
