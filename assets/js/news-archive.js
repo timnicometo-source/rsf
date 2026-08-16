@@ -87,8 +87,9 @@ function renderFeatured(elements, article) {
   const imagePosition = normalizeImagePosition(article.cardImagePosition);
 
   elements.featured.innerHTML = `
-    <a class="featured-story__image" href="${escapeAttribute(article.url)}" aria-label="Read ${escapeAttribute(article.title)}">
-      <img class="image-position--${imagePosition}" src="${escapeAttribute(cardImage)}" alt="${escapeAttribute(article.featuredAlt || "")}" />
+    <a class="featured-story__image smart-image" data-smart-image href="${escapeAttribute(article.url)}" aria-label="Read ${escapeAttribute(article.title)}">
+      <img class="smart-image__backdrop" src="${escapeAttribute(cardImage)}" alt="" aria-hidden="true" />
+      <img class="smart-image__main image-position--${imagePosition}" src="${escapeAttribute(cardImage)}" alt="${escapeAttribute(article.featuredAlt || "")}" />
     </a>
     <div class="featured-story__content">
       <div class="story-meta">
@@ -100,6 +101,8 @@ function renderFeatured(elements, article) {
       <a class="story-link" href="${escapeAttribute(article.url)}">Read the full story <span aria-hidden="true">→</span></a>
     </div>
   `;
+
+  initializeSmartImages(elements.featured);
 }
 
 function renderArchive(elements) {
@@ -134,6 +137,7 @@ function renderArchive(elements) {
   elements.empty.hidden = true;
   elements.grid.hidden = false;
   elements.grid.innerHTML = visibleArticles.map(renderCard).join("");
+  initializeSmartImages(elements.grid);
 }
 
 function renderCard(article) {
@@ -141,8 +145,9 @@ function renderCard(article) {
   const imagePosition = normalizeImagePosition(article.cardImagePosition);
 
   return `<article class="news-card">
-    <a class="news-card__image" href="${escapeAttribute(article.url)}" tabindex="-1" aria-hidden="true">
-      <img class="image-position--${imagePosition}" src="${escapeAttribute(cardImage)}" alt="" loading="lazy" />
+    <a class="news-card__image smart-image" data-smart-image href="${escapeAttribute(article.url)}" tabindex="-1" aria-hidden="true">
+      <img class="smart-image__backdrop" src="${escapeAttribute(cardImage)}" alt="" aria-hidden="true" loading="lazy" />
+      <img class="smart-image__main image-position--${imagePosition}" src="${escapeAttribute(cardImage)}" alt="" loading="lazy" />
     </a>
     <div class="news-card__body">
       <div class="story-meta">
@@ -154,6 +159,36 @@ function renderCard(article) {
       <a class="story-link" href="${escapeAttribute(article.url)}" aria-label="Read ${escapeAttribute(article.title)}">Read story <span aria-hidden="true">→</span></a>
     </div>
   </article>`;
+}
+
+/*
+ * Archive images use normal cover cropping while most of the photograph remains
+ * visible. Portrait, square, and unusually wide images automatically switch to
+ * a full-image presentation over a softened copy of the same photograph.
+ */
+function initializeSmartImages(root = document) {
+  root.querySelectorAll("[data-smart-image]").forEach((frame) => {
+    const image = frame.querySelector(".smart-image__main");
+    if (!image) return;
+
+    const evaluate = () => {
+      const boxWidth = frame.clientWidth;
+      const boxHeight = frame.clientHeight;
+      if (!boxWidth || !boxHeight || !image.naturalWidth || !image.naturalHeight) {
+        return;
+      }
+
+      const imageRatio = image.naturalWidth / image.naturalHeight;
+      const boxRatio = boxWidth / boxHeight;
+      const visibleFraction = Math.min(imageRatio / boxRatio, boxRatio / imageRatio);
+
+      frame.classList.toggle("smart-image--contain", visibleFraction < 0.78);
+      frame.classList.add("smart-image--ready");
+    };
+
+    if (image.complete) evaluate();
+    else image.addEventListener("load", evaluate, { once: true });
+  });
 }
 
 function normalizeImagePosition(value) {

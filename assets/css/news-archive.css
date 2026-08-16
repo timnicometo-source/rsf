@@ -325,6 +325,55 @@
   transition: transform 0.45s ease;
 }
 
+/* Automatic archive image fitting
+   --------------------------------
+   JavaScript compares each photograph with its display frame. Images that
+   would lose too much content with object-fit: cover switch to a contained
+   presentation over a softened copy of the same photograph. */
+
+.smart-image {
+  position: relative;
+  isolation: isolate;
+  background: #dce7ec;
+}
+
+.smart-image .smart-image__backdrop,
+.smart-image .smart-image__main {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.smart-image .smart-image__backdrop {
+  z-index: 0;
+  object-fit: cover;
+  opacity: 0;
+  filter: blur(24px) brightness(0.7) saturate(0.82);
+  transform: scale(1.13);
+  transition: opacity 0.25s ease;
+}
+
+.smart-image .smart-image__main {
+  z-index: 1;
+  object-fit: cover;
+}
+
+.smart-image.smart-image--contain .smart-image__backdrop {
+  opacity: 1;
+}
+
+.smart-image.smart-image--contain .smart-image__main {
+  padding: 14px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.featured-story__image.smart-image--contain .smart-image__main {
+  padding: clamp(18px, 3vw, 34px);
+}
+
 /* Per-article archive image crop controls */
 
 .featured-story__image img.image-position--center,
@@ -342,8 +391,18 @@
 .featured-story__image img.image-position--right,
 .news-card__image img.image-position--right { object-position: right center; }
 
-.news-card:hover .news-card__image img {
+.news-card:hover .news-card__image .smart-image__main {
   transform: scale(1.035);
+}
+
+.news-card:hover .news-card__image.smart-image--contain .smart-image__main,
+.featured-story:hover .featured-story__image.smart-image--contain .smart-image__main {
+  transform: none;
+}
+
+.featured-story:hover .featured-story__image .smart-image__backdrop,
+.news-card:hover .news-card__image .smart-image__backdrop {
+  transform: scale(1.13);
 }
 
 .news-card__body {
