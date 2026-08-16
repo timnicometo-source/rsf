@@ -154,6 +154,33 @@ content:
         label: Featured image caption
         type: text
 
+      - name: cardImage
+        label: Optional News card image
+        description: Use a separately cropped landscape image on the News archive. Leave blank to use the featured image.
+        type: image
+        options:
+          media: news_images
+          path: assets/images/news
+          rename: safe
+
+      - name: cardImagePosition
+        label: News card image position
+        description: Controls which part of the image remains visible when the archive card crops it.
+        type: select
+        default: center
+        options:
+          values:
+            - name: center
+              label: Center
+            - name: top
+              label: Top
+            - name: bottom
+              label: Bottom
+            - name: left
+              label: Left
+            - name: right
+              label: Right
+
       - name: blocks
         label: Article sections
         type: block
