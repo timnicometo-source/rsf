@@ -11,7 +11,9 @@
     "author": "Rochester Sports Foundation",
     "featured": true,
     "featuredImage": "/assets/images/news/grants-awarded-2026/banquet-grant-recipients-ryfsa.jpg",
-    "featuredAlt": "Foundation President Chris Terry with Rochester Youth Fastpitch Softball Association grant recipients"
+    "featuredAlt": "Foundation President Chris Terry with Rochester Youth Fastpitch Softball Association grant recipients",
+    "cardImage": "",
+    "cardImagePosition": "center"
   },
   {
     "slug": "rochester-sports-foundation-to-participate-in-rochester-sports-recreation-complex-working-group",
@@ -25,6 +27,8 @@
     "author": "Ed Hruska",
     "featured": false,
     "featuredImage": "/assets/images/news/RSRC/rsrc-project-12.jpg",
-    "featuredAlt": "Recommended Program Design Option"
+    "featuredAlt": "Recommended Program Design Option",
+    "cardImage": "",
+    "cardImagePosition": "center"
   }
 ]
