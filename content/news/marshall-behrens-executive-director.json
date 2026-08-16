@@ -14,21 +14,22 @@
   "featuredImage": "/assets/images/news/marshall-behrens-executive-director/marshall-behrens.jpg",
   "featuredAlt": "Marshall Behrens, executive director of the Rochester Sports Foundation",
   "featuredCaption": "Marshall Behrens was named executive director of the Rochester Sports Foundation, succeeding Ed Hruska.",
+  "cardImagePosition": "top",
   "blocks": [
     {
       "type": "paragraph",
       "style": "lede",
-      "content": "The Rochester Sports Foundation announced the appointment of Marshall Behrens as executive director, succeeding longtime leader Ed Hruska following his retirement at the end of 2025."
+      "content": "<p>The Rochester Sports Foundation announced the appointment of Marshall Behrens as executive director, succeeding longtime leader Ed Hruska following his retirement at the end of 2025.</p>"
     },
     {
       "type": "paragraph",
       "style": "standard",
-      "content": "Behrens brings a combination of leadership, community involvement, and deep sports experience to the role. A fixture in Rochester athletics, he has served as a sports official for more than 25 years in football, basketball, baseball, and softball at the high-school and collegiate levels."
+      "content": "<p>Behrens brings a combination of leadership, community involvement, and deep sports experience to the role. A fixture in Rochester athletics, he has served as a sports official for more than 25 years in football, basketball, baseball, and softball at the high-school and collegiate levels.</p>"
     },
     {
       "type": "paragraph",
       "style": "standard",
-      "content": "He has also served on the Rochester Sports Board since 2015, including terms as treasurer and 2024 board president, helping guide the city's sports tourism strategy and event-development efforts."
+      "content": "<p>He has also served on the Rochester Sports Board since 2015, including terms as treasurer and 2024 board president, helping guide the city's sports tourism strategy and event-development efforts.</p>"
     },
     {
       "type": "quote",
@@ -43,7 +44,7 @@
     {
       "type": "paragraph",
       "style": "standard",
-      "content": "Alongside his volunteer service, Behrens built a professional career at Mayo Clinic and served as a research administrator for surgical specialties in Rochester. He credits both his career and officiating experience with strengthening his ability to lead teams, build consensus, and manage complex challenges under pressure."
+      "content": "<p>Alongside his volunteer service, Behrens built a professional career at Mayo Clinic and served as a research administrator for surgical specialties in Rochester. He credits both his career and officiating experience with strengthening his ability to lead teams, build consensus, and manage complex challenges under pressure.</p>"
     },
     {
       "type": "quote",
@@ -54,7 +55,7 @@
     {
       "type": "paragraph",
       "style": "standard",
-      "content": "Terry described Behrens as a proven leader who understands how to unite people around projects that improve Rochester's sports infrastructure and economic vitality. Retiring Executive Director Ed Hruska added that Behrens already understood how strong facilities can strengthen community connections and generate long-term impact."
+      "content": "<p>Terry described Behrens as a proven leader who understands how to unite people around projects that improve Rochester's sports infrastructure and economic vitality. Retiring Executive Director Ed Hruska added that Behrens already understood how strong facilities can strengthen community connections and generate long-term impact.</p>"
     },
     {
       "type": "heading",
@@ -63,7 +64,7 @@
     {
       "type": "paragraph",
       "style": "standard",
-      "content": "Behrens identified stronger partnerships and new facility-funding approaches among his top priorities. He said the Foundation could play a pivotal role in maximizing Rochester's potential while building on what the community had already accomplished."
+      "content": "<p>Behrens identified stronger partnerships and new facility-funding approaches among his top priorities. He said the Foundation could play a pivotal role in maximizing Rochester's potential while building on what the community had already accomplished.</p>"
     },
     {
       "type": "callout",
@@ -74,8 +75,18 @@
     }
   ],
   "related": [
-    { "title": "Steve Strickland Joins Rochester Sports Foundation Board", "category": "People", "date": "2026-04-07", "url": "/news/steve-strickland-joins-rochester-sports-foundation-board/" },
-    { "title": "Proposed Enhancements to the Rochester Regional Sports Center", "category": "Projects", "date": "2026-02-26", "url": "/news/rochester-regional-sports-center-enhancements/" }
+    {
+      "title": "Steve Strickland Joins Rochester Sports Foundation Board",
+      "category": "People",
+      "date": "2026-04-07",
+      "url": "/news/steve-strickland-joins-rochester-sports-foundation-board/"
+    },
+    {
+      "title": "Proposed Enhancements to the Rochester Regional Sports Center",
+      "category": "Projects",
+      "date": "2026-02-26",
+      "url": "/news/rochester-regional-sports-center-enhancements/"
+    }
   ],
   "seo": {
     "title": "Marshall Behrens Named Rochester Sports Foundation Executive Director",
