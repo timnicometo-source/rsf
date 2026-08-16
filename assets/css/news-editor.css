@@ -91,6 +91,19 @@ button { cursor: pointer; }
 .image-preview { min-height: 220px; margin-top: 20px; display: grid; place-items: center; overflow: hidden; border: 1px dashed #aebdc7; color: var(--muted); background: white; }
 .image-preview img { width: 100%; max-height: 420px; object-fit: contain; }
 
+.image-preview--card {
+  max-width: 560px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.image-preview--card img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+}
+
 .add-block-control { display: flex; gap: 8px; align-items: stretch; }
 .add-block-control select { min-width: 180px; }
 .blocks-list, .related-list { display: grid; gap: 16px; }

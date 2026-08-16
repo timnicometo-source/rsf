@@ -83,9 +83,12 @@ function renderFeatured(elements, article) {
     return;
   }
 
+  const cardImage = article.cardImage || article.featuredImage;
+  const imagePosition = normalizeImagePosition(article.cardImagePosition);
+
   elements.featured.innerHTML = `
     <a class="featured-story__image" href="${escapeAttribute(article.url)}" aria-label="Read ${escapeAttribute(article.title)}">
-      <img src="${escapeAttribute(article.featuredImage)}" alt="${escapeAttribute(article.featuredAlt || "")}" />
+      <img class="image-position--${imagePosition}" src="${escapeAttribute(cardImage)}" alt="${escapeAttribute(article.featuredAlt || "")}" />
     </a>
     <div class="featured-story__content">
       <div class="story-meta">
@@ -134,9 +137,12 @@ function renderArchive(elements) {
 }
 
 function renderCard(article) {
+  const cardImage = article.cardImage || article.featuredImage;
+  const imagePosition = normalizeImagePosition(article.cardImagePosition);
+
   return `<article class="news-card">
     <a class="news-card__image" href="${escapeAttribute(article.url)}" tabindex="-1" aria-hidden="true">
-      <img src="${escapeAttribute(article.featuredImage)}" alt="" loading="lazy" />
+      <img class="image-position--${imagePosition}" src="${escapeAttribute(cardImage)}" alt="" loading="lazy" />
     </a>
     <div class="news-card__body">
       <div class="story-meta">
@@ -148,6 +154,12 @@ function renderCard(article) {
       <a class="story-link" href="${escapeAttribute(article.url)}" aria-label="Read ${escapeAttribute(article.title)}">Read story <span aria-hidden="true">→</span></a>
     </div>
   </article>`;
+}
+
+function normalizeImagePosition(value) {
+  return ["center", "top", "bottom", "left", "right"].includes(value)
+    ? value
+    : "center";
 }
 
 function clearFilters(elements) {

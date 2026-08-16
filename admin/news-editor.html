@@ -159,6 +159,27 @@
               </div>
               <div id="featured-preview" class="image-preview empty"><span>Featured image preview</span></div>
             </div>
+
+            <div class="subpanel">
+              <div class="subpanel-heading">
+                <div><p class="editor-eyebrow">News archive</p><h3>Card photograph</h3><p>Optionally use a different crop for archive cards. If left blank, the featured photograph is used.</p></div>
+                <button class="button button-small upload-image" type="button" data-target="cardImage">Choose and copy image</button>
+              </div>
+              <div class="field-grid">
+                <label class="field field-wide"><span>Optional card image path</span><input name="cardImage" class="media-path" type="text" /></label>
+                <label class="field">
+                  <span>Card image position</span>
+                  <select name="cardImagePosition">
+                    <option value="center">Center</option>
+                    <option value="top">Top</option>
+                    <option value="bottom">Bottom</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                  </select>
+                </label>
+              </div>
+              <div id="card-preview" class="image-preview image-preview--card empty"><span>News card image preview</span></div>
+            </div>
           </section>
 
           <section class="tab-panel" data-panel="content">

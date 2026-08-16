@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     preview: document.querySelector("#open-preview"),
     deleteArticle: document.querySelector("#delete-article"),
     imagePreview: document.querySelector("#featured-preview"),
+    cardImagePreview: document.querySelector("#card-preview"),
     dialog: document.querySelector("#confirm-dialog"),
   });
 
@@ -172,6 +173,8 @@ function createArticle() {
     featuredImage: "",
     featuredAlt: "",
     featuredCaption: "",
+    cardImage: "",
+    cardImagePosition: "center",
     blocks: [newBlock("paragraph")],
     related: [],
     seo: { title: "", description: "" },
@@ -185,6 +188,8 @@ function createArticle() {
 function normalizeArticle(article) {
   return {
     ...article,
+    cardImage: article.cardImage || "",
+    cardImagePosition: ["center", "top", "bottom", "left", "right"].includes(article.cardImagePosition) ? article.cardImagePosition : "center",
     blocks: Array.isArray(article.blocks) ? article.blocks : [],
     related: Array.isArray(article.related) ? article.related : [],
     seo: article.seo || { title: "", description: "" },
@@ -195,7 +200,7 @@ function populateForm() {
   elements.welcome.hidden = true;
   elements.form.hidden = false;
   const article = state.article;
-  const fields = ["title", "slug", "shortTitle", "deck", "summary", "articleType", "category", "publicationDate", "author", "readTime", "status", "featuredImage", "featuredAlt", "featuredCaption"];
+  const fields = ["title", "slug", "shortTitle", "deck", "summary", "articleType", "category", "publicationDate", "author", "readTime", "status", "featuredImage", "featuredAlt", "featuredCaption", "cardImage", "cardImagePosition"];
   fields.forEach((name) => {
     const field = elements.form.elements[name];
     if (field) field.value = article[name] ?? "";
@@ -207,6 +212,7 @@ function populateForm() {
   renderBlocks();
   renderRelated();
   renderFeaturedPreview();
+  renderCardImagePreview();
   showNotice("", "");
   switchToPanel("details");
 }
@@ -237,7 +243,11 @@ function handleFormInput(event) {
     }
   }
 
-  if (name === "featuredImage") renderFeaturedPreview();
+  if (name === "featuredImage") {
+    renderFeaturedPreview();
+    renderCardImagePreview();
+  }
+  if (name === "cardImage" || name === "cardImagePosition") renderCardImagePreview();
   markDirty();
 }
 
@@ -492,7 +502,8 @@ async function uploadImage(event) {
   const target = event.currentTarget.dataset.target;
   state.article[target] = path;
   elements.form.elements[target].value = path;
-  renderFeaturedPreview();
+  if (target === "featuredImage") renderFeaturedPreview();
+  renderCardImagePreview();
   markDirty();
 }
 
@@ -538,6 +549,22 @@ function renderFeaturedPreview() {
   const path = state.article.featuredImage;
   elements.imagePreview.innerHTML = path ? `<img src="${escapeAttribute(path)}" alt="" />` : "<span>Featured image preview</span>";
   elements.imagePreview.classList.toggle("empty", !path);
+}
+
+function renderCardImagePreview() {
+  const path = state.article.cardImage || state.article.featuredImage;
+  const position = ["center", "top", "bottom", "left", "right"].includes(state.article.cardImagePosition)
+    ? state.article.cardImagePosition
+    : "center";
+  const objectPosition = position === "top" || position === "bottom"
+    ? `center ${position}`
+    : position === "left" || position === "right"
+      ? `${position} center`
+      : "center center";
+  elements.cardImagePreview.innerHTML = path
+    ? `<img src="${escapeAttribute(path)}" alt="" style="object-position: ${objectPosition};" />`
+    : "<span>News card image preview</span>";
+  elements.cardImagePreview.classList.toggle("empty", !path);
 }
 
 function openPreview() {

@@ -56,6 +56,8 @@ const publicArticles = articles
     featured: Boolean(article.featured),
     featuredImage: article.featuredImage,
     featuredAlt: article.featuredAlt,
+    cardImage: article.cardImage || "",
+    cardImagePosition: normalizeCardImagePosition(article.cardImagePosition),
   }));
 
 await mkdir(dirname(indexFile), { recursive: true });
@@ -99,6 +101,12 @@ function validateArticle(article, filename) {
   if (!["draft", "published"].includes(article.status)) {
     throw new Error(`${filename}: status must be draft or published.`);
   }
+}
+
+function normalizeCardImagePosition(value) {
+  return ["center", "top", "bottom", "left", "right"].includes(value)
+    ? value
+    : "center";
 }
 
 async function removeStalePages(currentArticles) {
